@@ -1,6 +1,8 @@
 
 //const VacationDB = require('../connection.js');
+
 const express = require('express')
+const app = express();
 const destinationsRouter = express.Router();
 const Destination = require('../models/DestinationSchema')
 const ObjectId = require('mongodb').ObjectId;
