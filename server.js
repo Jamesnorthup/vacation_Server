@@ -20,7 +20,7 @@ app.use('/',  controllerDestinations )
 app.use('/CurrentWeather', controllerWeather )
 app.use('/CardDetails', controllerCard )
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('we live')
 })
 
