@@ -8,7 +8,10 @@ var mongoose = require('mongoose');
 const cardRouter = express.Router();
 
 const cardSchema = require('../models/CardSchema.js')
-
+const cors = require('cors');
+app.use(cors({
+    credentials: true
+}));
 
 cardRouter.put('/', async(req,res)=> {
 
