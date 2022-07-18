@@ -5,7 +5,10 @@ const WeatherSchema= require('../models/WeatherSchema')
 var mongoose = require('mongoose');
 const ObjectId = require('mongodb').ObjectId;
 const weatherRouter = express.Router();
-
+const cors = require('cors');
+app.use(cors({
+    credentials: true
+}));
 
 
 weatherRouter.put('/', async(req,res)=> {
