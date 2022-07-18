@@ -29,11 +29,9 @@ destinationsRouter.put('/', async (req, res) => {
 })
 
 destinationsRouter.post('/', async (req, res) => {
-    console.log(req.body)
-    const updateDestination = await Destination.findByIdAndUpdate(req.params.id, req.body, {
-        upsert: true
-    })
-    res.status(200).json({status:200, data: updateDestination})
+
+    const createDestination = await Destination.create(req.body)
+    res.status(201).json({ status: 201, newDestination: createDestination });
 
 })
 
