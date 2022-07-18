@@ -4,7 +4,10 @@ const express = require('express')
 const destinationsRouter = express.Router();
 const Destination = require('../models/DestinationSchema')
 const ObjectId = require('mongodb').ObjectId;
-
+const cors = require('cors');
+app.use(cors({
+    credentials: true
+}));
 destinationsRouter.put('/', async (req, res) => {
     //  const destinationCollection = VacationDB.getDb().collection('Destinations')
     Destination.findOneAndUpdate(
