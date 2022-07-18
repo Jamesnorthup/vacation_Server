@@ -1,6 +1,7 @@
 
 //const VacationDB = require('../connection.js');
 const express = require('express')
+const app = express();
 const WeatherSchema= require('../models/WeatherSchema')
 var mongoose = require('mongoose');
 const ObjectId = require('mongodb').ObjectId;
