@@ -46,9 +46,8 @@ destinationsRouter.get('/', async (req, res) => {
 
 
 destinationsRouter.delete('/', async (req, res) => {
-    
-        const deleteDestination = await Destination.findByIdAndDelete(req.params.id)
+        let removeID = ObjectId(req.body.id)
+        const deleteDestination = await Destination.findByIdAndDelete(removeID)
         res.status(204).json('Destination deleted')
 })
-
 module.exports = destinationsRouter
